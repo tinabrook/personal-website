@@ -868,4 +868,9 @@ textarea {
 	text-align: center;
 }
 
+.typed-cursor {
+    font-size: 20px;
+    color: #E1C598;
+}
+
 /*# sourceMappingURL=base.css.map */
