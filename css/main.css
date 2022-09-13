@@ -1377,8 +1377,8 @@ header .logo a {
 	border-color: rgba(255, 255, 255, 0.3);
 	height: 6rem !important;
 	line-height: 5.4rem !important;
-	padding: 0 3.5rem 0 3rem !important;
-	margin-top: 2rem;
+	padding: 0 1rem 0 3rem !important;
+	margin-top: 4rem;
 	font-size: 1.3rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
@@ -1402,7 +1402,7 @@ header .logo a {
 	position: absolute;
 	width: 100%;
 	left: 0;
-	bottom: 7.2rem;
+	bottom: 3rem;
 	font-size: 3.3rem;
 	margin: 0;
 	padding: 0;
