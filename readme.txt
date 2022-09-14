@@ -1,3 +1,12 @@
+==================================================================================================
+
+This repository stores the foundational code for my personal website -- cwbrook.com
+The base code was leveraged from styleshout from a template titled KARDS. The details regarding
+the open-source template and terms of use are included below.
+I made further HTML, CSS and JS adjustments to make the template fit-for-purpose.
+Please consider the terms of use if you choose to fork or leverage content from this public repo.
+
+==================================================================================================
 
 ==================================================================================================
 
