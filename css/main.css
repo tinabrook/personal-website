@@ -24,6 +24,7 @@
  *  16. stats
  *  17. contact
  *  18. footer
+ *  19. blog
  *
  * =================================================================== 
  */
@@ -1048,6 +1049,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	letter-spacing: .4rem;
 }
 
+.beige-section {
+	background: #E1C598;
+}
+.beige-section p.lead {
+	color: #7d7d7d;
+}
+
 /**
  * responsive:
  * common styles
@@ -1296,8 +1304,9 @@ header .logo a {
 #intro {
 	background: #151515 url(../images/intro-bg-1.jpeg) no-repeat center bottom;
 	-webkit-background-size: cover auto;
-	-moz-background-size: cover;
-	background-size: cover;
+	-moz-background-size: cover auto;
+	background-size: cover auto;
+	background-position: center center;
 	background-attachment: fixed;
 	width: 100%;
 	height: 100%;
@@ -2604,5 +2613,491 @@ footer .copyright span:last-child::after {
 #go-top a:hover {
 	background: #000000;
 }
+
+/** 
+ * ===================================================================
+ * 19. blog - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * blog page header
+ * ------------------------------------------------------------------- */
+
+ /* @media only screen and (max-width: 1200px) {
+    .page-header__content {
+        max-width: 800px;
+        font-size: 1.7rem;
+    }
+    .page-header__cat {
+        font-size: 1.3rem;
+    }
+    .page-header__title {
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .page-header__content {
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .page-header--single {
+        padding-top: 18rem;
+    }
+    .page-header__title {
+        font-size: 5.4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .page-header {
+        padding-top: 18rem;
+    }
+    .page-header__content p {
+        padding-right: 0;
+    }
+    .page-header__title {
+        font-size: 4.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .page-header__title {
+        font-size: 4.2rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .page-header__content {
+        font-size: 1.6rem;
+        line-height: 1.875;
+    }
+    .page-header__title {
+        font-size: 3.8rem;
+    }
+} */
+
+/* ===================================================================
+ * # blog - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+ .s-blog {
+    padding-top: 15rem;
+    padding-bottom: 9.6rem;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+/* -------------------------------------------------------------------
+ * ## blog content - _blog.scss
+ * ------------------------------------------------------------------- */
+
+ .blog-content-wrap {
+    background-color: #FFFFFF;
+    padding-top: 35rem;
+    padding-bottom: 12rem;
+}
+
+.blog-content {
+    max-width: 1000px;
+}
+
+.blog-content__main {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.blog-content__main img {
+    max-width: 1000px;
+    margin: 3rem 0 3rem -6rem;
+}
+
+/* post tags
+ * ------------------------------------------------- */
+
+.blog-content__tags {
+    margin-top: 6rem;
+    font-family: "lora-regular", sans-serif;
+}
+
+.blog-content__tags span {
+    font-family: "lora-bold", sans-serif;
+    color: #E1C598;
+    position: relative;
+    padding-right: 55px;
+    margin-right: 1.5rem;
+    margin-top: 1.2rem;
+}
+
+.blog-content__tags span::after {
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.blog-content__tags .blog-content__tag-list {
+    display: inline-block;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.blog-content__tags .blog-content__tag-list::after {
+    display: none;
+}
+
+.blog-content__tags .blog-content__tag-list a {
+    display: inline-block;
+    font-family: "lora-regular", sans-serif;
+    font-size: 1.3rem;
+    line-height: inherit;
+    color: #797979;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 0 10px;
+}
+
+.blog-content__tags .blog-content__tag-list a:hover, 
+.blog-content__tags .blog-content__tag-list a:focus {
+    background-color: #0D0A0B;
+    border-color: #0D0A0B;
+    color: #FFFFFF;
+}
+
+.blog-content__tags .blog-content__tag-list a:last-child {
+    margin-right: 0;
+}
+
+
+/* blog single page navigation
+ * ------------------------------------------------- */
+
+.blog-content__pagenav {
+    margin-top: 7.8rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.blog-content__nav {
+    padding-right: 220px;
+}
+
+.blog-content__nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.blog-content__nav span {
+    display: block;
+    font-family: "lora-regular", sans-serif;
+    font-size: 1.6rem;
+    color: #797979;
+    margin-bottom: 1.2rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-content__nav a {
+    font-family: "lora-bold", sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: #0D0A0B;
+}
+
+.blog-content__nav a:hover span, .blog-content__nav a:focus span {
+    color: #0D0A0B;
+}
+
+.blog-content__prev, .blog-content__next {
+    width: 50%;
+    float: left;
+    padding-right: 2rem;
+}
+
+.blog-content__all {
+    text-align: right;
+    width: 210px;
+    position: absolute;
+    top: 2.1rem;
+    right: 0;
+}
+
+.blog-content__all .im {
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+}
+
+
+/* blog entries navigation
+ * ------------------------------------------------- */
+
+.blog-entries-nav {
+    text-align: center;
+    max-width: 600px;
+    padding-top: 3.6rem;
+}
+
+.blog-entries-nav .btn {
+    margin-right: 3rem;
+    min-width: 150px;
+}
+
+.blog-entries-nav .btn:last-child {
+    margin-right: 0;
+}
+
+.blog-entries-nav .im {
+    font-size: 1.3rem;
+    line-height: 1;
+    position: relative;
+    top: 2px;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * blog content
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+    .blog-content {
+        max-width: 900px;
+    }
+    .blog-content__main {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .blog-content__main img {
+        max-width: 900px;
+        margin: 3rem 0 3rem -5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .blog-content {
+        max-width: 800px;
+    }
+    .blog-content__main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .blog-content__main img {
+        max-width: 800px;
+        margin: 3rem 0 3rem -4rem;
+    }
+    .blog-content__prev, .blog-content__next {
+        width: 100%;
+        float: none;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .blog-content__main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .blog-content__main img {
+        max-width: 100%;
+        margin: 3rem 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .blog-content__nav {
+        padding-right: 0;
+    }
+    .blog-content__all {
+        position: static;
+        text-align: left;
+        width: auto;
+        margin-top: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blog-content__prev, .blog-content__next, .blog-content__all {
+        text-align: center;
+    }
+    .blog-content__main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .blog-entries-nav .btn {
+        margin-right: 0;
+        min-width: none;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .blog-content__main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .blog-content__all .btn {
+        width: 100%;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * ## comments - _blog.scss
+ * ------------------------------------------------------------------- */
+
+.comments-wrap {
+    background-color: #f0f0f0;
+    padding: 8.4rem 0 9rem;
+}
+
+
+/* comments
+ * -------------------------------------------------- */
+
+#comments {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    max-width: 940px;
+}
+
+#comments h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+#comments ol, #comments ul {
+    list-style: none;
+}
+
+.commentlist {
+    margin: 3rem 0 5.4rem;
+    padding: 0;
+}
+
+.commentlist > .comment {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 1.8rem 0;
+    padding-left: 14%;
+}
+
+.comment__avatar {
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 6rem;
+    width: 6rem;
+}
+
+.comment__avatar img {
+    margin-top: 0.6rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+}
+
+.comment__info cite {
+    font-family: "lora-bold", sans-serif;
+    font-size: 1.8rem;
+    font-style: normal;
+    color: #0D0A0B;
+}
+
+.comment__meta {
+    font-family: "lora-regular", sans-serif;
+    font-size: 1.45rem;
+    line-height: 3rem;
+    font-style: normal;
+    display: block;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.comment__meta .reply {
+    font-family: "lora-bold", sans-serif;
+}
+
+.comment__meta .sep {
+    margin: 0 5px;
+}
+
+.comment__text {
+    clear: both;
+    margin: 1.8rem 0 0 0;
+    padding: 0;
+}
+
+.comment ul.children {
+    margin: 0;
+    padding: 1.8rem 0 0 0;
+}
+
+.comment ul.children li {
+    padding-left: 5%;
+    padding-top: 1.8rem;
+}
+
+
+/* comments form
+ * ---------------------------- */
+
+#comments .respond {
+    padding-top: 4.2rem;
+}
+
+#comments form {
+    padding-top: 3rem;
+}
+
+#comments form .form-field {
+    margin-bottom: 3.9rem;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * comments
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    #comments form button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #comments h3 {
+        text-align: center;
+    }
+    .commentlist > .comment {
+        padding-left: 0;
+    }
+    .commentlist .comment__avatar {
+        display: none;
+    }
+}
+
 
 /*# sourceMappingURL=main.css.map */
