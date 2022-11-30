@@ -1304,9 +1304,8 @@ header .logo a {
 #intro {
 	background: #151515 url(../images/intro-bg-1.jpeg) no-repeat center bottom;
 	-webkit-background-size: cover auto;
-	-moz-background-size: cover auto;
-	background-size: cover auto;
-	background-position: center center;
+	-moz-background-size: cover;
+	background-size: cover;
 	background-attachment: fixed;
 	width: 100%;
 	height: 100%;
